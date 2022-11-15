@@ -1,0 +1,23 @@
+<p>datagrid works!</p>
+<p-table [value]="images" styleClass="p-datatable-gridlines">
+    <ng-template pTemplate="caption">
+        Header
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Filnavn</th>
+            <th>størrelse</th>
+            <th>Beskrivelse</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-images>
+        <tr>
+            <td>{{images.name}}</td>
+            <td>{{images.size}}</td>
+            <td>{{images.description}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        Footer
+    </ng-template>
+</p-table>
