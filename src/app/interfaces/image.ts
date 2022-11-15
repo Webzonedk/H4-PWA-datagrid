@@ -1,6 +1,7 @@
 export interface Image {
-    name: string,
-    size: string,
-    description: string,
-    image: any
+    name: string | undefined,
+    size: string | undefined,
+    type: string | undefined,
+    description: string | undefined,
+    objectUrl: any | undefined
 }

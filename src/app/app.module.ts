@@ -16,6 +16,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {ToastModule} from 'primeng/toast';
 import {MatSliderModule} from '@angular/material/slider';
 import {TableModule} from 'primeng/table';
+import {ImageModule} from 'primeng/image';
+
 
 
 @NgModule({
@@ -37,7 +39,8 @@ import {TableModule} from 'primeng/table';
     ToastModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    TableModule
+    TableModule,
+    ImageModule
     
   ],
   providers: [],

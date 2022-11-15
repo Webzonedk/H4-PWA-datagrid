@@ -1,19 +1,23 @@
 <p>datagrid works!</p>
 <p-table [value]="images" styleClass="p-datatable-gridlines">
     <ng-template pTemplate="caption">
-        Header
+        Billeder i galleriet
     </ng-template>
     <ng-template pTemplate="header">
         <tr>
+            <th>billede</th>
             <th>Filnavn</th>
             <th>størrelse</th>
+            <th>Filtype</th>
             <th>Beskrivelse</th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-images>
-        <tr>
+    <ng-template pTemplate="body" let-images >
+        <tr (click)="clickedRow(images)">
+            <td><p-image [src]="images.objectUrl" height="40"></p-image></td>
             <td>{{images.name}}</td>
             <td>{{images.size}}</td>
+            <td>{{images.type}}</td>
             <td>{{images.description}}</td>
         </tr>
     </ng-template>

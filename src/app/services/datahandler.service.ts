@@ -15,9 +15,12 @@ export class DatahandlerService {
 
   postImage(values: any) {
     this.images.push(values);
+    next:
+
+    complete:  
     //this.images$ = this.images;
-    this.images$.next(values);
-    console.log(this.getImages);
+    this.images$.next(this.images);
+    console.log("in datahandler: ", this.images$);
   }
 
   getImages(){
