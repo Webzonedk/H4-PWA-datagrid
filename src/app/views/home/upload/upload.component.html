@@ -1,10 +1,9 @@
 
-<p-toast></p-toast>
 
 <div class="card">
     <!-- <p-fileUpload name="myfile[]"></p-fileUpload> -->
 
-    <h5>Upload image</h5>
+    <h2>Upload image</h2>
     <p-fileUpload #form name="uploadedFiles[]" [customUpload]="true" [multiple]="true" (uploadHandler)="onUpload($event, form)" [maxFileSize]="5000000" accept="image/*">
             <ng-template pTemplate="content">
                 <ul *ngIf="uploadedFiles.length">

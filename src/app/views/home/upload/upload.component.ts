@@ -24,7 +24,6 @@ export class UploadComponent{
         this.image.name = file.name;
         this.image.type = file.type;
         this.image.size = file.size;
-        this.image.description;
         this.image.objectUrl = this.sanitizer.bypassSecurityTrustResourceUrl(file.objectURL.changingThisBreaksApplicationSecurity);
         console.log("fil: ", file); 
        // console.log("fil: ", this.uploadedFiles[0]); 

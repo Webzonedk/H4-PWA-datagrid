@@ -20,12 +20,6 @@ const routes: Routes = [
     //resolve: { items: DatahandlerService }
   },
   {
-    path: 'upload',
-    component: UploadComponent,
-    //canActivate: [UploadGuard],
-    resolve: { items: DatahandlerService }
-  },
-  {
     path: '**', redirectTo: ''
   }
 

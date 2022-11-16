@@ -1,4 +1,4 @@
-<p>datagrid works!</p>
+
 <p-table [value]="images" styleClass="p-datatable-gridlines">
     <ng-template pTemplate="caption">
         Billeder i galleriet
@@ -7,21 +7,19 @@
         <tr>
             <th>billede</th>
             <th>Filnavn</th>
-            <th>størrelse</th>
             <th>Filtype</th>
-            <th>Beskrivelse</th>
+            <th>størrelse</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-images >
         <tr (click)="clickedRow(images)">
-            <td><p-image [src]="images.objectUrl" height="40"></p-image></td>
+            <td><p-image [src]="images.objectUrl" height="50"></p-image></td>
             <td>{{images.name}}</td>
-            <td>{{images.size}}</td>
             <td>{{images.type}}</td>
-            <td>{{images.description}}</td>
+            <td>{{images.size}}</td>
         </tr>
     </ng-template>
     <ng-template pTemplate="summary">
-        Footer
+        Copyright&copy; 2022 | <a href="https://www.kpdesign.dk">KPdesign.dk</a>
     </ng-template>
 </p-table>

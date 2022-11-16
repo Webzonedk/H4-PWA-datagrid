@@ -1,0 +1,21 @@
+
+<div class="grid p-fluid">
+    <form class="row" [formGroup]="editForm" (ngSubmit)="editImage($event)">
+        <div class="col-12 md:col-12 lg:col-4 ">
+            <span>
+                <p-image [src]="selectedImage.objectUrl" width="500"></p-image>
+            </span>
+        </div>
+        <div class="col-12 md:col-4 lg:col-2">
+            <p-dropdown [options]="properties" optionLabel="name"></p-dropdown>
+        </div>
+        <div class="col-12 md:col-4 lg:col-2">
+            <label for="fileName" class="block">File Name:</label>
+            <input id="fileName" type="fileName" formControlName="fileName" placeholder="{{selectedImage.name}}" pInputText/>
+        </div>
+
+        <div class="col-12 md:col-4 lg:col-2">
+            <p-button label="Submit" type="submit"></p-button>
+        </div>
+    </form>
+</div>
